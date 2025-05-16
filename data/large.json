@@ -1,0 +1,140 @@
+{
+  "company": {
+    "name": "TechNova Inc.",
+    "founded": 2010,
+    "isActive": true,
+    "departments": [
+      {
+        "id": 1,
+        "name": "Engineering",
+        "employees": [
+          {
+            "id": "E101",
+            "name": "Alice Johnson",
+            "role": "Software Engineer",
+            "skills": ["JavaScript", "Node.js", "GraphQL"],
+            "projects": [
+              {
+                "name": "Apollo",
+                "budget": 50000,
+                "duration": "6 months"
+              },
+              {
+                "name": "Orion",
+                "budget": 120000,
+                "duration": "12 months"
+              }
+            ],
+            "performance": {
+              "2023": {
+                "rating": 4.7,
+                "goalsMet": 12
+              },
+              "2024": {
+                "rating": 4.9,
+                "goalsMet": 15
+              }
+            }
+          },
+          {
+            "id": "E102",
+            "name": "Bob Smith",
+            "role": "DevOps Engineer",
+            "skills": ["Docker", "Kubernetes", "Terraform"],
+            "projects": [],
+            "performance": {
+              "2023": {
+                "rating": 4.5,
+                "goalsMet": 10
+              },
+              "2024": {
+                "rating": 4.6,
+                "goalsMet": 11
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Marketing",
+        "employees": [
+          {
+            "id": "M201",
+            "name": "Carol Danvers",
+            "role": "Marketing Lead",
+            "skills": ["SEO", "Content Strategy", "Branding"],
+            "campaigns": [
+              {
+                "title": "Summer Blast 2024",
+                "reach": 1000000,
+                "channels": ["Email", "Social Media"]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "offices": {
+      "headquarters": {
+        "city": "San Francisco",
+        "address": {
+          "street": "123 Market St",
+          "zip": "94105"
+        },
+        "contacts": {
+          "phone": "+1-555-123-4567",
+          "email": "hq@technova.com"
+        }
+      },
+      "international": [
+        {
+          "location": "London",
+          "employees": 120,
+          "languages": ["English", "French"]
+        },
+        {
+          "location": "Tokyo",
+          "employees": 95,
+          "languages": ["Japanese", "English"]
+        }
+      ]
+    },
+    "products": [
+      {
+        "id": "P1001",
+        "name": "NovaChat",
+        "version": "2.3.1",
+        "releaseDate": "2024-08-15",
+        "features": [
+          "Instant messaging",
+          "Voice/video calls",
+          "End-to-end encryption"
+        ]
+      },
+      {
+        "id": "P1002",
+        "name": "NovaCRM",
+        "version": "1.9.4",
+        "releaseDate": "2023-11-01",
+        "features": [
+          "Contact management",
+          "Sales tracking",
+          "Analytics dashboard"
+        ]
+      }
+    ],
+    "financials": {
+      "2022": {
+        "revenue": 12500000,
+        "expenses": 8600000,
+        "netProfit": 3900000
+      },
+      "2023": {
+        "revenue": 15400000,
+        "expenses": 9700000,
+        "netProfit": 5700000
+      }
+    }
+  }
+}

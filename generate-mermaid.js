@@ -1,8 +1,24 @@
-// generate-mermaid.js
 const fs = require("fs");
 const path = require("path");
 
-const jsonData = require("./data.json");
+let [,, inputPath, outputPath] = process.argv;
+
+if (!inputPath || !outputPath) {
+    console.error("❌ Usage: node generate-mermaid.js <input.json> <output.mmd>");
+    process.exit(1);
+}
+
+inputPath = './data/' + inputPath + '.json';
+outputPath = './diagrams/' + outputPath + '.mmd'
+
+let jsonData;
+try {
+    const raw = fs.readFileSync(path.resolve(inputPath), "utf8");
+    jsonData = JSON.parse(raw);
+} catch (err) {
+    console.error(`❌ Error reading or parsing JSON from ${inputPath}:`, err.message);
+    process.exit(1);
+}
 
 let mermaidLines = ["graph TD"];
 let nodeCounter = 0;
@@ -43,5 +59,10 @@ function addNode(parentId, key, value) {
 
 addNode(null, "root", jsonData);
 
-fs.writeFileSync("output.mmd", mermaidLines.join("\n"));
-console.log("✅ Mermaid diagram written to output.mmd");
+try {
+    fs.writeFileSync(path.resolve(outputPath), mermaidLines.join("\n"), "utf8");
+    console.log(`✅ Mermaid diagram written to ${outputPath}`);
+} catch (err) {
+    console.error(`❌ Error writing to ${outputPath}:`, err.message);
+    process.exit(1);
+}
